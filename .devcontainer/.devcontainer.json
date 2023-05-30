@@ -1,0 +1,16 @@
+{
+    "name": "Python 3.11 with Docker",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ],
+            "settings": {
+                "python.pythonPath": "/usr/local/bin/python3"
+            }
+        }
+    }
+}
+  
