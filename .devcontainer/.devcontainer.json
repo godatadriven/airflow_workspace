@@ -11,6 +11,13 @@
                 "python.pythonPath": "/usr/local/bin/python3"
             }
         }
+    },      
+    "hostRequirements": {
+        "cpus": 8,
+        "memory": "8gb",
+        "storage": "32gb"
     }
 }
+
+
   
