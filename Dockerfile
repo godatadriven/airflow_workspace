@@ -1,8 +1,6 @@
 FROM python:3.11
 
 # Set the memory limit for the Codespaces environment
-ARG CODESPACES_MEMORY=8g
-ENV CODESPACES_MEMORY=$CODESPACES_MEMORY
 
 # Install Docker
 RUN apt-get update && apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common && \
