@@ -60,3 +60,7 @@ An no, 3.9 is not enough. If you see 3.9 means that you did not selected the rig
 
 this will make Airflow available at: 
 http://localhost:8080
+
+
+### 8) Login to Airflow
+![image](images/codespaces4.png)
