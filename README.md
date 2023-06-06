@@ -36,7 +36,9 @@ This will be your workspace for the rest of this training
 
 * In the terminal (ctrl + ` ) check you have more than 4GB of allocated memory:
 
+```
 docker run --rm "debian:bullseye-slim" bash -c 'numfmt --to iec $(echo $(($(getconf _PHYS_PAGES) * $(getconf PAGE_SIZE))))
+```
 
 An no, 3.9 is not enough. If you see 3.9 means that you did not selected the right machine in step 2.
 
