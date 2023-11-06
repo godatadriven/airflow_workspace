@@ -11,7 +11,8 @@
                 "python.pythonPath": "/usr/local/bin/python3"
             }
         }
-    }
+    },
+    "forwardPorts": [8080]
 }
 
 
