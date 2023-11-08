@@ -36,3 +36,44 @@ http://localhost:8080
 
 ### 8) Login to Airflow
 ![image](images/codespaces4.png)
+
+
+# Running Airflow in a Python Environment
+If for some reason its not possible to you to run Airflow using docker, you can also do it using python.
+
+1) Install airflow
+```
+    pip install apache-airflow
+```
+or
+```
+    poetry add apache-airflow
+```
+
+make sure you have a virtual environment activated in which you can isolate your code/dependencies
+
+
+2) initialize the database
+```
+    airflow db init
+```
+
+3) Create a new user
+```
+    airflow users create --username airflow --password airflow --firstname anon --lastname nymus --role Admin --email user@company.com 
+```
+
+4) Copy your dags to the dags/ folder
+```
+    cp dags/mydag.py ~/airflow/dags/
+```
+
+5) In a termnial initialize the webserver
+```
+    airflow webserver -p 8080
+```
+
+6) In a second terminal initialize the scheduler
+```
+    airflow scheduler
+```
