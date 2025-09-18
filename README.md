@@ -12,14 +12,7 @@ This repository contains the code for the Airflow training environment.
 
     An no, 3.9 is not enough. If you see 3.9 means that you did not selected the right machine in step 2.
 
-1. Run database migrations *(ONLY RUN ONCE)*
-
-    You need to run database migrations and create the first user account. It is all defined in the docker compose file so just run:
-    ```
-    docker compose up airflow-init
-    ```
-
-1. Now you can start all services:
+2. Now you can start all services:
     ```
     docker compose up
     ```
@@ -27,7 +20,7 @@ This repository contains the code for the Airflow training environment.
     This will make Airflow available at: http://localhost:8080
 
 
-1. Login to Airflow:
+3. Login to Airflow:
 
     ![image](images/codespaces4.png)
 
@@ -47,27 +40,55 @@ If for some reason its not possible to you to run Airflow using docker, you can 
     Make sure you have a virtual environment activated in which you can isolate your code/dependencies
 
 
-1. initialize the database
+2. initialize the database
     ```
     airflow db init
     ```
 
-1. Create a new user
+3. Create a new user
     ```
     airflow users create --username airflow --password airflow --firstname anon --lastname nymus --role Admin --email user@company.com 
     ```
 
-1. Copy your dags to the dags/ folder
+4. Copy your dags to the dags/ folder
     ```
     cp dags/mydag.py ~/airflow/dags/
     ```
 
-1. In a termnial initialize the webserver
+5. In a termnial initialize the webserver
     ```
     airflow webserver -p 8080
     ```
 
-1. In a second terminal initialize the scheduler
+6. In a second terminal initialize the scheduler
     ```
     airflow scheduler
     ```
+
+## TODO
+
+Add task dependency explanation to the slide deck (bitshift operator) based on https://www.astronomer.io/docs/learn/managing-dependencies
+It is in slides 92 - 95 and dag dependencies in 96-99
+
+Datasets in 100 - 103
+
+Connections 105-110 Need to go earlier (when explaining hooks)
+
+Architectures 111-115 can also go earlier
+
+
+Building your own operator goes into catapi normal task not a build your own!
+
+Time and scheduling 42 - 47 needs to go earlier
+
+
+
+Time&scheduling 42-47
+Best practices 48 - 61
+Logging and monitoring 62- 76
+Connections 104-110
+Provider packages 76 - 78 (skip bonus)
+Dataset 92 - 104
+Architectures 111 - end
+Testing 80 - 88
+CICD 89 - 91
